@@ -11,7 +11,7 @@ WHATSAPP_TOKEN = "EAAkGYV0KptkBOx8w4lSPFbYZCbAn1WZBT4FKxRiGPoM4ZBe1yleBUQZBsEa82
 PHONE_NUMBER_ID = "591899364010894"
 
 # OpenAI key
-openai.api_key = "your_openai_api_key"
+openai.api_key = "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"
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
