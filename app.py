@@ -39,7 +39,7 @@ def webhook():
                             print(f"📨 Message from {sender_id}: {text}")
 
                             # Send hardcoded reply
-                            send_whatsapp_message(sender_id, "Hey! This is an automated test reply from shaken noy stirred")
+                            send_whatsapp_message(sender_id, "Hey! This is an automated test reply from shaken not stirred")
 
         except Exception as e:
             print("❌ Error processing webhook:", e)
