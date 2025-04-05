@@ -42,18 +42,15 @@ def webhook():
 
                             print(f"📨 Message from {sender_id}: {text}")
 
-                            # Get response from OpenAI using the new Chat API
-                            response = openai.ChatCompletion.create(
-                                model="gpt-4",  # Or any model you prefer (e.g., "gpt-3.5-turbo")
-                                messages=[
-                                    {"role": "system", "content": "You are a helpful assistant."},
-                                    {"role": "user", "content": text}
-                                ],
+                            # Get response from OpenAI using the new API method for completions
+                            response = openai.Completion.create(
+                                model="text-davinci-003",  # Or any model you prefer (e.g., "gpt-3.5-turbo" if available)
+                                prompt=text,
                                 max_tokens=150  # Adjust as necessary
                             )
 
                             # Extract the response text from OpenAI
-                            reply_text = response['choices'][0]['message']['content'].strip()
+                            reply_text = response['choices'][0]['text'].strip()
 
                             # Send response back to user via WhatsApp
                             send_whatsapp_message(sender_id, reply_text)
