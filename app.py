@@ -2,6 +2,7 @@ import openai
 from flask import Flask, request
 import requests
 import json
+import os
 
 app = Flask(__name__)
 
@@ -9,10 +10,7 @@ VERIFY_TOKEN = "theverifying"
 WHATSAPP_TOKEN = "EAAkGYV0KptkBOyiTAF3xsvUItYQi5ZBJbVlKvDYLFDufI6DbkDWV6rJWIAUqN7lqfAfLAYcNKsi0rJkokkjmBzbO5WUGqoG4SQREbNHeWwsaHSLifYEzdYu8WbGwAJjFhrgfePRrLcCZBtxMcxZCZBY7CW4M9NlabZC8Jqe8huXrHcqITEmK0wpr5TXCeZBotQPWz6vtjmE7jaFNkaoM1qE4RP28cMuAOH83EZD"
 PHONE_NUMBER_ID = "591899364010894"
 
-load_dotenv()
-
-# Initialize OpenAI key from env
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 
 # Test OpenAI key on start
