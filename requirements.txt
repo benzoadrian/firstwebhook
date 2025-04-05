@@ -1,4 +1,5 @@
 flask
 gunicorn
 requests
-openai openai
+openai==1.14.3
+
