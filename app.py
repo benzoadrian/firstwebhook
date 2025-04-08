@@ -7,9 +7,10 @@ import os
 app = Flask(__name__)
 
 VERIFY_TOKEN = "theverifying"
-WHATSAPP_TOKEN = "EAAkGYV0KptkBOwJk2fsHkNuD5TN46XQmCgyr4nzGWZC782dAhlP2uXqPimWjBDVR7fUK6rFitZCtdtbZALdHmudA9tnAtbPKnsZBJ5iypk5Vpq1Cf2AMRlp5G4dOAyn19DiUCv5ZA2Qz8H2fbqopjApDUeGWXAZCx5OxodsWmL21qhuzZCOoEBILVGZC2nJlXQNcOs5BhD7Lvn7QOhT29zbLYB9QgVqZCZAsEHqxAZD"
+
 PHONE_NUMBER_ID = "591899364010894"
 
+WHATSAPP_TOKEN = os.environ.get("WHATSAPP_TOKEN")
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 
