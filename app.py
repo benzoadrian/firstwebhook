@@ -1,7 +1,7 @@
 from flask import Flask, request
 import requests
 import json
-from openai import OpenAI
+import openai 
 
 app = Flask(__name__)
 
