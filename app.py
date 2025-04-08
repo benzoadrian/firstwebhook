@@ -11,7 +11,7 @@ PHONE_NUMBER_ID = "591899364010894"
 
 
 # Set up OpenAI client
-openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
